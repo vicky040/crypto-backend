@@ -1,4 +1,4 @@
-import OTP from "../models/otp.models.js";
+import OTP from "../Models/otp.models.js";
 import asyncHandler from "../Utils/asyncHandler.js";
 import sendOTP from "../Utils/Email.js";
 import jwt from "jsonwebtoken";
