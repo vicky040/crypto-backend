@@ -5,10 +5,13 @@ FROM node:18
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
-COPY package.json ./
+COPY package.json package-lock.json ./
 
-# Install dependencies
+# Install dependencies, including devDependencies
 RUN npm install
+
+# Install nodemon globally
+RUN npm install -g nodemon
 
 # Copy the rest of the application code to the working directory
 COPY . .
